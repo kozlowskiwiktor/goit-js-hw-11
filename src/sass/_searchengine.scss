@@ -1,0 +1,32 @@
+.search-form {
+    background-color: black;
+    padding: 1em 0em;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 0 auto;
+
+    & input,
+    & button {
+    height: 2em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 5px;
+    border: none;
+    }
+    & input {
+    padding-inline: 0.5em;
+    width: 20%;
+    margin-inline: 1em;
+    border-color: whitesmoke;
+    } 
+    & button {
+    color: rgb(224, 106, 197);
+    &:focus {
+    color:rgb(140, 16, 111);
+    background-color: rgb(153, 146, 136);
+    }
+    &:hover {
+    background-color: rgb(45, 46, 46);
+    }
+    }
+}
