@@ -84,12 +84,13 @@ searchForm.addEventListener('submit', async event => {
     page = 1;
 
     const fetchedPhotos = await fetchPhotos();
-    if (totalHits > 0) {
         Notiflix.Notify.info(`Hooray! We found ${totalHits} images.`)
-        gallery.innerHTML = '';
-        loadBtn.style.display = 'block';
+    gallery.innerHTML = '';
+    
         renderPhotos(fetchedPhotos);
-    } else if (page === lastPage) {
+        loadBtn.style.display = 'block';
+    
+    if (page === lastPage) {
         loadBtn.style.display = 'none';
         Notiflix.Notify.info("We're sorry, but you've reached the end of search results.");
     } else if (totalHits === 0) {
