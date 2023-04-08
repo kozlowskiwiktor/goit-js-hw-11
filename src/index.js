@@ -87,10 +87,10 @@ searchForm.addEventListener('submit', async event => {
     if (totalHits > 0) {
         Notiflix.Notify.info(`Hooray! We found ${totalHits} images.`)
         gallery.innerHTML = '';
+        loadBtn.style.display = 'block';
     }
 
     renderPhotos(fetchedPhotos);
-    loadBtn.style.display = 'block';
 
     if (page === lastPage) {
         loadBtn.style.display = 'none';
