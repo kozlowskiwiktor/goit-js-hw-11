@@ -72,7 +72,8 @@ const renderPhotos = (photos) => {
         }).join('');
     
     gallery.insertAdjacentHTML('beforeend', markupPhotos);
-    new SimpleLightbox('.gallery a', {captions: false,}).refresh();
+    const lightbox = new SimpleLightbox('.gallery a', { captions: false, })
+    lightbox.refresh();
 }
 
 searchForm.addEventListener('submit', async event => {
