@@ -72,7 +72,7 @@ const renderPhotos = (photos) => {
         }).join('');
     
     gallery.insertAdjacentHTML('beforeend', markupPhotos);
-    simpleLightBox = new SimpleLightbox('.gallery a', {captions: false,}).refresh();
+    new SimpleLightbox('.gallery a', {captions: false,}).refresh();
 }
 
 searchForm.addEventListener('submit', async event => {
